@@ -16,3 +16,13 @@ def process_data(r1):
     r2_df = r1_df[['name','language']]
     language_list_df = r2_df.groupby('language').count()
     return language_list_df, r2_df
+
+def data_to_json(language_list_df, r2_df):
+    output = {}
+    language_list = language_list_df.index.tolist()
+    for language in language_list:
+        single_output = {}
+        single_output['number'] = language_list_df.loc[language,'name']
+        single_output['list'] = r2_df[r2_df.language == language]['name'].tolist()
+        output[language] = single_output
+    return output
