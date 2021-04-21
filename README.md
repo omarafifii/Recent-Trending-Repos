@@ -4,5 +4,5 @@ Get the most starred repos created in the last 30 days on github sorted by the l
 ### Code
 Created using the python framework Flask
 
-Check it out in this link:
+Check it out on this link:
 https://trending-github-repo.herokuapp.com/
